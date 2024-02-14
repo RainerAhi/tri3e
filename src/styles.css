@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.cdnfonts.com/css/lakesight-personal-use-only');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Solway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Solway:wght@700&display=swap');
+@import url("https://db.onlinewebfonts.com/c/14679a7a97d388dac3a0380375ca4afe?family=Neometric+Alt+Heavy");
+@import url("https://db.onlinewebfonts.com/c/21553b99c039b140f424afd283a33017?family=Mark+Web+W04+Ultra");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+@font-face {
+  font-family: 'Lakesight';
+  src: url('./Lakesight.woff2') format('woff2'),
+      url('./Lakesight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #FFCC70;
+  background-image: linear-gradient(90deg, #e472d4 0%, #C850C0 46%, #FFCC70 100%);  
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+/* TRACK */
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: all;
+  background-color: transparent;
+}
+
+.experience {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+/* NAVIGATION BAR */
+.nav {
+  background-color: transparent;
+  width: 100%;
+  height: 7%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 5%;
+  align-items: center;
+  z-index: 10;
+  bottom: 0;
+  margin-top: 2.5%;
+}
+
+.smalllogo {
+  height: 50px;
+}
+
+.center {
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+.center h1 {
+  padding: 1rem;
+  color: white;
+}
+
+.right-content {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  flex-direction: row;
+}
+
+.center {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SECTION ONE ELEMENTS */
+
+.title {
+  margin-top: 15%;
+  color: white;
+  font-size: 14rem;
+  z-index: 1;
+  line-height: 0rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-align: center;
+}
+
+.front {
+  color: white;
+  font-size: 14rem;
+  z-index: 6;
+  position: relative;
+  line-height: 0rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-align: center;
+}
+
+.headline-container{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: all;
+  margin-top: 15%;
+}
+
+#text-behind, #text-front, #text-behind-blur {
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  text-align: center;
+  font-size: 15rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 10px;
+  line-height: 0.8;
+  pointer-events: none;
+}
+
+#text-behind {
+  color: white;
+  z-index: 0;
+}
+
+#text-behind-blur {
+  color: white;
+  filter: blur(7.5px);
+  -webkit-filter: blur(7.5px);
+  z-index: 0;
+}
+
+#text-front {
+  /*  Set text-color to transparent to only show the outline  */
+  color: transparent;
+  text-stroke: 2px white;
+  -webkit-text-stroke: 2px white;
+  z-index: 3;
+}
+
+.centerbutton {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.joinbutton {
+  width: 1000px;
+  height: 75px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  opacity: 1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  border-width: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 0;
+  align-self: center;
+  margin-bottom: 3%;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+}
+
+/* SECTION TWO ELEMENTS */
+.two {
+  display: flex;
+  align-items: center;
+}
+
+.twotext {
+  height: 80vh;
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0rem;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  margin-left: 7.5%;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.twotext h1{
+  font-size: 3rem;
+}
+
+.twotext span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
+
+/* SECTION THREE ELEMENTS */
+
+.three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.threecontainer {
+  width: 30%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 5rem;
+  z-index: 10;
+}
+
+.threecontainer h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  margin-bottom: 0;
+  margin-top: 25%;
+}
+
+.threecontainer p {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  margin: 7.5%;
+  text-align: center;
+}
+
+.threecenter {
+  margin: 1%;
+}
+
+
+/* SECTION FOUR ELEMENTS */
+
+.four {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: right;
+}
+
+.fourtext {
+  height: 80vh;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  border-radius: 0rem;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  flex-direction: column;
+  margin-right: 7.5%;
+}
+
+.how {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+  line-height: 4.25rem;
+}
+
+.community {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.fourtext p {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.fourlist {
+  list-style-position: inside;
+  width: 75%;
+  align-self: center;
+  font-size: 1.5rem;
+}
+
+/* SECTION FIVE */
+
+.five {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.five-layover {
+  width: 100%;
+  height: 100vh;
+  background-color: #e472d4;
+  background-image: linear-gradient(90deg, #e472d4 0%, #C850C0 46%, #FFCC70 100%);  
+  backdrop-filter: blur(16px);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reviews {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  margin: 0;
+  margin-bottom: 1%;
+}
+
+.face {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  margin-bottom: 1%;
+}
+
+.reviewone {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.faq {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  margin: 0;
+  margin-top: 5%;
+  margin-bottom: 1%;
+}
+
+.question {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+
+.answer {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  width: 50%;
+  margin: 0;
+  text-align: center;
+}
+
+.qcenter {
+  margin-top: 1%;
+}
+
+.acenter {
+  margin-bottom: 1%;
+}
+
+.talk {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  width: 50vw;
+  height: 60px;
+  border: transparent;
+  border-radius: 30px;
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  opacity: 1;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+}
+
+::placeholder {
+  color: white;
+  padding-left: 2%;
+  opacity: 1; /* Firefox */
+}
+
+.send-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 100px;
+  border: transparent;
+  align-self: center;
+  margin-top: 7.5%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  opacity: 1;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.75rem;
+}
+
+.send-button:hover {
+  color: #FFCC70;
+  transition: 0.5s;
+}
+
+
+
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+
+  .title {
+    margin-top: 15%;
+    color: #531500;
+    font-size: 8rem;
+    z-index: 1;
+    line-height: 8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-align: center;
+  }
+  
+  .front {
+    color: #531500;
+    font-size: 9rem;
+    z-index: 6;
+    position: relative;
+    line-height: 8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-align: center;
+  }
+
+}
+
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 4rem;
+  width: 100vw;
+  height: 100vh;
+  z-index: 12;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-color: #e472d4;
+  background-image: linear-gradient(90deg, #e472d4 0%, #C850C0 46%, #FFCC70 100%);  
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.loading-screen--hidden {
+  animation: fade-out 0.5s ease-in-out forwards 1s;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loading-screen__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 10rem;
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+}
+
+.progress__container {
+  width: 100%;
+  height: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.progress__bar {
+  width: 0;
+  height: 100%;
+  background-color: white;
+  transition: width 0.5s ease-in-out;
+}
+
+
+
