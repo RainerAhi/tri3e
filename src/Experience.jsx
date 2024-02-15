@@ -13,8 +13,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Experience() {
 
-  const { camera, scene } = useThree()
-
   const controlsRef = useRef()
 
   const [isMobile, setIsMobile] = useState(false);
@@ -37,7 +35,6 @@ export default function Experience() {
   }, []);
 
   console.log(isMobile)
-  
 
   return (
     <>
