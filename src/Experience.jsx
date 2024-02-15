@@ -44,10 +44,10 @@ export default function Experience() {
       <SoftShadows intensity={ 20 } />
       <Suspense fallback={ <Loading /> } >
         <Float speed={ 2 } rotationIntensity={ 0.3 } >
-          <Model position={ [ 0, 0, 0 ] } scale={ 1.75 } />
+          <Model position={ [ 0, 0, 0 ] } scale={ isMobile ? 1 : 1.75 } />
         </Float>  
       </Suspense>
-      <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ true } enablePan={ false } />
+      <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
       <Environment preset='sunset' />
       </>
   )

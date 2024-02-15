@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -12,6 +12,25 @@ export default function Model(props) {
   const model = useRef()
 
   const tl = gsap.timeline()
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 767);
+    };
+
+    // Add event listener to listen for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Initial check for mobile device on component mount
+    handleResize();
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useLayoutEffect(() => {
 
@@ -30,9 +49,9 @@ export default function Model(props) {
     })
 
     .to(camera.position, {
-      x: -4,
-      y: 8,
-      z: -2,
+      x: isMobile ? -3 : -4,
+      y: isMobile ? 7 : 8,
+      z: isMobile ? 5 : -2,
       scrollTrigger: {
         trigger: ".two",
         start: "top bottom",
@@ -43,9 +62,9 @@ export default function Model(props) {
     })
 
     .to(scene.position, {
-      x: -1,
-      y: 1,
-      z: 2,
+      x: isMobile ? 2 : -1,
+      y: isMobile ? 13 : 1,
+      z: isMobile ? 1 : 1,
       scrollTrigger: {
         trigger: ".two",
         start: "top bottom",
@@ -113,9 +132,9 @@ export default function Model(props) {
     })
 
     .to(scene.position, {
-      x: -2,
-      y: 1.5,
-      z: -1.5,
+      x: -2.2,
+      y: 1.4,
+      z: isMobile ? -3 : -1.8,
       scrollTrigger: {
         trigger: ".four",
         start: "top bottom",
