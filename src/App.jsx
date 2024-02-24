@@ -17,7 +17,7 @@ const LoadingScreen = () => {
   return (
     <div className={`loading-screen ${active ? "" : "loading-screen--hidden"}`}>
       <div className="loading-screen__container">
-        <h1 className="loading-screen__title">TRI3E</h1>
+        <h1 className="loading-screen__title">TRIBE</h1>
         <div className="progress__container">
           <div
             className="progress__bar"
@@ -68,9 +68,6 @@ function App() {
             <SectionOne />
             <SectionTwo />
             <SectionThree />
-            <SectionFour/>
-            <SectionFive />
-            <SectionSix />
             
       </>
     )
