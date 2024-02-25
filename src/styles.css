@@ -550,9 +550,11 @@ body,
   width: 60%;
   color: white;
   text-align: center;
-  align-self: center;
-  margin-top: 2.5%;
+  align-self: self-start;
+  margin-top: 5%;
   margin-bottom: 5%;
+  text-align: left;
+  margin-left: 11%;
 }
 
 .box {
