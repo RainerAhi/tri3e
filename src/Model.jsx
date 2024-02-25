@@ -10,6 +10,8 @@ export default function Model(props) {
   const { camera, scene } = useThree()
 
   const model = useRef()
+  
+  const material = useRef()
 
   const tl = gsap.timeline()
 
@@ -95,17 +97,61 @@ export default function Model(props) {
       },
     })
 
+    // FOUR TO FIVE
+
+    .to(model.current.rotation, {
+      y: Math.PI * 10,
+      scrollTrigger: {
+        trigger: ".five",
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+        immediateRender: false,
+      },
+    })
+
+    //FIVE TO SIX
+
+    .to(".bottle, .hat, .medicine, .shirt", {
+      opacity: 0,
+      width: "20%",
+      rotation: 30,
+      scrollTrigger: {
+        trigger: ".six",
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+        immediateRender: false,
+      },
+    })
+
+    .to(model.current.scale, {
+      x: 0,
+      y: 0,
+      z: 0,
+      scrollTrigger: {
+        trigger: ".six",
+        start: "top bottom",
+        end: "bottom bottom",
+        scrub: true,
+        immediateRender: false,
+      },
+    })
+
+
+
   }, [])
 
 
   const { nodes, materials } = useGLTF("/nfc.glb");
   return (
-    <group {...props} dispose={null} ref={model} >
+    <group {...props} dispose={null} ref={model} scale={ 0.025 } >
         <mesh
           geometry={nodes.Cylinder.geometry}
-          material={nodes.Cylinder.material}
           rotation={[Math.PI * 0.5, 0, 0]}
-        />
+        >
+          <meshPhysicalMaterial opacity={ 0 } ref={material} />
+        </mesh>
     </group>
   );
 }
