@@ -44,7 +44,7 @@ export default function Experience() {
           <Model position={ [ 0, 0, 0 ] } />
         </Float>  
       </Suspense>
-      <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ true } enablePan={ false } />
+      <OrbitControls ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
       <Environment preset='apartment' />
       </>
   )

@@ -16,7 +16,7 @@ export const SectionOne = () => {
               <h1>AVAILABLE NOW</h1>
           </div>
           <div class="right-content">
-              <h1>CONTACT</h1>
+              <h1>CONTACT US</h1>
           </div>
       </div>
       <div class="headline-container">
