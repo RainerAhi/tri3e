@@ -13,7 +13,7 @@ body,
   margin: 0;
   padding: 0;
   background-color: #FFCC70;
-  background-image: url("gr.png");
+  background-image: url("/gr.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -620,7 +620,7 @@ body,
   place-items: center;
   text-align: center;
   background-color: #FFCC70;
-  background-image: url("gr.png");
+  background-image: url("/gr.png");
   background-size: cover;
   background-attachment: fixed;
   opacity: 1;
@@ -888,7 +888,7 @@ body,
     display: grid;
     place-items: center;
     text-align: center;
-    background-image: url("gr.png");
+    background-image: url("/gr.png");
     background-size: cover;
     background-attachment: fixed;
     opacity: 1;
