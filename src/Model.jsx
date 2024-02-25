@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -13,45 +13,13 @@ export default function Model(props) {
 
   const tl = gsap.timeline()
 
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 767);
-    };
-
-    // Add event listener to listen for window resize
-    window.addEventListener('resize', handleResize);
-
-    // Initial check for mobile device on component mount
-    handleResize();
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   useLayoutEffect(() => {
+
+    //FIRST TO SECOND
 
     tl
     .to(model.current.rotation, {
-      x: Math.PI * 1,
-      // y: Math.PI * 2,
-      // z: Math.PI / 1,
-      scrollTrigger: {
-        trigger: ".two",
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-        immediateRender: false,
-      },
-    })
-
-    .to(camera.position, {
-      x: isMobile ? -3 : -4,
-      y: isMobile ? 7 : 8,
-      z: isMobile ? 5 : -2,
+      y: Math.PI * 2.5,
       scrollTrigger: {
         trigger: ".two",
         start: "top bottom",
@@ -62,9 +30,9 @@ export default function Model(props) {
     })
 
     .to(scene.position, {
-      x: isMobile ? 2 : -1,
-      y: isMobile ? 13 : 1,
-      z: isMobile ? 1 : 1,
+      z: 2,
+      y: -0.5,
+
       scrollTrigger: {
         trigger: ".two",
         start: "top bottom",
@@ -73,23 +41,73 @@ export default function Model(props) {
         immediateRender: false,
       },
     })
+
+    //SECOND TO THIRD
+
+    .to(scene.position, {
+      z: -3,
+      x: 2,
+      y: 0.5,
+      scrollTrigger: {
+        trigger: ".three",
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+        immediateRender: false,
+      },
+    })
+
+    .to(model.current.rotation, {
+      y: Math.PI * 5,
+      scrollTrigger: {
+        trigger: ".three",
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+        immediateRender: false,
+      },
+    })
+
+    //THIRD TO FOURTH
     
+    .to(scene.position, {
+      z: 0,
+      x: 0,
+      y: 0,
+      scrollTrigger: {
+        trigger: ".four",
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+        immediateRender: false,
+      },
+    })
+
+    
+    .to(model.current.rotation, {
+      y: Math.PI * 7.5,
+      scrollTrigger: {
+        trigger: ".four",
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+        immediateRender: false,
+      },
+    })
 
   }, [])
 
-  const { nodes, materials } = useGLTF("/chip.gltf");
+
+  const { nodes, materials } = useGLTF("/nfc.glb");
   return (
-    <group {...props} dispose={null}  >
-      <group rotation-z={ Math.PI / 8 } scale={0.01} ref={model} >
+    <group {...props} dispose={null} ref={model} >
         <mesh
           geometry={nodes.Cylinder.geometry}
           material={nodes.Cylinder.material}
-        >
-          <meshPhysicalMaterial metalness={ 1 } roughness={ 1 } color={ "#ffffff" } />
-        </mesh>
-      </group>
+          rotation={[Math.PI * 0.5, 0, 0]}
+        />
     </group>
   );
 }
 
-useGLTF.preload("/chip.gltf");
+useGLTF.preload("/nfc.glb");

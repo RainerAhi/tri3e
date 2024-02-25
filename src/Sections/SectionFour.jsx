@@ -3,15 +3,75 @@ import React from "react";
 export const SectionFour = () => {
     return (
 <section class="section four">
-    <div class="fourtext">
-        <h1 class="how">HOW?</h1>
-        <p>The physical fan experience happens in a dedicated app that when tapped with any physical product, provides the user with a unique dedicated environment.</p>
-        <h1 class="community">Access to an exclusive community:</h1>
-        <ul class="fourlist">
-            <li>Ability to connect and engage with other fans in the community.</li>
-            <li>View exclusive content. Participate in fan contests, raffles, promotions and more.</li>
-            <li>Receive notification & invitations to IRL gated events, loyalty programs.</li>
-        </ul>
+    <div className="left-reviews" >
+
+        <div className="review first" >
+            <div className="stars" >
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </div>
+            <p className="review-text" >The most secure and best NFC</p>
+            <div  className="divider" />
+            <div className="user" >
+                <i class="fa-solid fa-user"></i>
+                <p>@johndoe</p>
+            </div>
+        </div>
+
+        <div className="review second" >
+            <div className="stars" >
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </div>
+            <p className="review-text" >The most amazing invention</p>
+            <div  className="divider" />
+            <div className="user" >
+                <i class="fa-solid fa-user"></i>
+                <p>@timcook</p>
+            </div>
+        </div>
+
+    </div>
+    <div className="right-reviews" >
+
+    <div className="review third" >
+            <div className="stars" >
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </div>
+            <p className="review-text" >It makes my life so much better</p>
+            <div  className="divider" />
+            <div className="user" >
+                <i class="fa-solid fa-user"></i>
+                <p>@warrenbuffett</p>
+            </div>
+        </div>
+
+        <div className="review fourth" >
+            <div className="stars" >
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            </div>
+            <p className="review-text" >The product is a wonderful invention</p>
+            <div  className="divider" />
+            <div className="user" >
+                <i class="fa-solid fa-user"></i>
+                <p>@larrypage</p>
+            </div>
+        </div>
+        
     </div>
 </section>
     )

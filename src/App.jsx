@@ -68,6 +68,7 @@ function App() {
             <SectionOne />
             <SectionTwo />
             <SectionThree />
+            <SectionFour />
             
       </>
     )
