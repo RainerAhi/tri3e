@@ -10,6 +10,9 @@ import { useProgress } from "@react-three/drei";
 import { Suspense, useEffect, useRef } from "react";
 import { SectionFive } from "./Sections/SectionFive";
 import { SectionSix } from "./Sections/SectionSix";
+import { SectionSeven } from "./Sections/SectionSeven";
+import { SectionEight } from "./Sections/SectionEight";
+import { SectionNine } from "./Sections/SectionNine";
 
 const LoadingScreen = () => {
   const { progress, active } = useProgress();
@@ -71,6 +74,9 @@ function App() {
             <SectionFour />
             <SectionFive />
             <SectionSix />
+            <SectionSeven />
+            <SectionEight />
+            <SectionNine />
             
       </>
     )
