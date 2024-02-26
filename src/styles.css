@@ -12,7 +12,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #FFCC70;
+  background-color: transparent;
   background-image: url("/gr.png");
   background-size: cover;
   background-attachment: fixed;
@@ -43,7 +43,7 @@ body,
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 0;
 }
 
 /* NAVIGATION BAR */
@@ -473,6 +473,15 @@ body,
   position: relative;
 }
 
+.seven-text {
+  font-size: 15rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: white;
+  line-height: 14rem;
+  margin-left: 7.5%;
+}
+
 /* SECTION EIGHT */
 
 .eight {
@@ -621,7 +630,7 @@ body,
   display: grid;
   place-items: center;
   text-align: center;
-  background-color: #FFCC70;
+  background-color: transparent;
   background-image: url("/gr.png");
   background-size: cover;
   background-attachment: fixed;
@@ -700,7 +709,7 @@ body,
   }
   
   .center h1 {
-    padding: 1rem;
+    padding: 0.3rem;
     color: white;
   }
   
@@ -708,6 +717,7 @@ body,
     color: white;
     font-family: 'Inter', sans-serif;
     flex-direction: row;
+    width: 50%;
   }
   
   .center {
@@ -721,10 +731,7 @@ body,
   .center {
     display: none;
   }
-  
-  .right-content {
-    margin-top: 10px;
-  }
+
   
   /* Adjustments for headline */
   .headline-container {
@@ -732,7 +739,7 @@ body,
   }
   
   #text-behind, #text-behind-blur, #text-front {
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 7.5px;
     line-height: 3rem;
   }
@@ -767,13 +774,28 @@ body,
     z-index: 10;
   }
   
-  .twotext h1{
-    font-size: 2rem;
+  .two-subheading {
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0;
   }
   
-  .twotext span {
+  .two-title {
+    font-size: 2.5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
+    line-height: 2.5rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .two-description {
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-top: 0;
+    width: 90%;
   }
   
   /* Adjustments for section three containers */
@@ -782,9 +804,15 @@ body,
     flex-direction: column;
     height: 300%;
   }
-  .threecontainer {
-    width: 80%;
-    margin-top: 10%;
+
+  .three-text {
+    font-size: 15rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: white;
+    line-height: 14rem;
+    margin-left: 7.5%;
+    z-index: 1;
   }
   
   /* Adjustments for section four text */
@@ -795,82 +823,183 @@ body,
     align-items: center;
     justify-content: center;
     margin-top: 30%;
+    flex-direction: column;
   }
 
-  .how {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 4rem;
-    text-align: center;
-    margin: 0;
-    line-height: 4.25rem;
-  }
-
-  .fourtext {
-    width: 80%;
-    margin-right: 0;
-    text-align: center;
-    z-index: 10;
+  .left-reviews {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-radius: 0rem;
+    color: white;
+    margin-right: auto; /* Adjusted to align to the left */
+    background-color: transparent;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 0%;
+    justify-content: space-evenly;
+    align-items: center;
   }
   
-  .fourlist {
+  .right-reviews {
+    height: 100%;
     width: 100%;
-    margin-top: 10px;
-    list-style-position: outside;
+    display: flex;
+    border-radius: 0rem;
+    color: white;
+    margin-left: auto; /* Adjusted to align to the right */
+    text-align: left;
+    background-color: transparent;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 0%;
+    justify-content: space-evenly;
+    align-items: center;
   }
+  
+  .review {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 100%;
+    border: white solid 2px;
+    border-radius: 20px;
+    margin-bottom: 10%;
+
+    background-color: transparent;
+  }
+
+  .first {
+    transform: rotate(0deg);
+  }
+  
+  .second {
+    transform: rotate(0deg);
+    margin-left: 0%;
+  }
+
+  .third {
+    z-index: 1;
+  }
+  
+  .fourth {
+    transform: rotate(0deg);
+  }
+
+  .review-text {
+    margin-left: 7.5%;
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
+    text-align: left;
+  }
+
+  .divider {
+    width: 100%;
+    background-color: white;
+    height: 2px;
+    margin-bottom: 0%;
+  }
+
+
+  .user p {
+    margin-left: 7.5px;
+    font-size: 0.8rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 10%;
+  }
+
+  
   
   /* Adjustments for section five layover */
 
   .five {
     margin-top: 50%;
-    margin-bottom: -30%;
-  }
-  .five-layover {
-    text-align: center;
-    width: 100%;
-    height: 200%;
-  }
-
-  .face {
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    margin-bottom: 1%;
+    flex-direction: column;
   }
   
-  .six {
-    margin-top: 0;
+  .five-text {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: white;
+    line-height: 3rem;
+    margin-left: 0%;
+    margin-top: 40%;
+    flex: 1; /* Added to allow the text to take remaining space */
   }
   
-  .answer {
-    width: 80%;
-  }
-
-  .reviewone {
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.25rem;
-    margin: 0;
-    width: 75%;
-  }
-
-  .answer, .question {
-    width: 80%;
-  }
-
-  .form-control {
-    width: 100%;
-    height: 60px;
-    border: transparent;
-    border-radius: 30px;
-    margin-top: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(16px);
-    opacity: 1;
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
+  .use-cases {
+    position: absolute;
+    top: 35%;
+    right: auto;
+    transform: translateY(0);
+    width: 90%; /* Adjust this width as needed */
     align-self: center;
+  }
+  
+  .use-cases p {
+    margin: 0; /* Remove default margin for paragraphs */
+    font-size: 1.75rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: white;
+  }
+  
+  .use-cases .divide {
+    height: 2px;
+    background-color: white;
+    margin: 12.5px 0; /* Adjust as needed */
+  }
+  
+  .five-subheading {
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: white;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+  
+  .bottle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    margin-left: 0%;
+    margin-top: 2.5%;
+  }
+  
+  .hat {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    margin-right: 7.5%;
+    margin-top: 2.5%;
+  }
+  
+  .medicine {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    margin-left: 7.5%;
+    margin-bottom: 2.5%;
+  }
+  
+  .shirt {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    margin-right: 7.5%;
+    margin-bottom: 2.5%;
   }
   
   /* Additional adjustments to prevent text overflow */
@@ -909,7 +1038,141 @@ body,
     overflow: hidden;
     border-radius: 10px;
   }
+
+  /* SECTION SEVEN MOBILE */
+
+  .seven {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
   
+  .seven-text {
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: white;
+    line-height: 14rem;
+    margin-left: 0%;
+    line-height: 5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* SECTION EIGHT MOBILE */
+
+.eight {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.selling-container {
+  width: 100%;
+  height: 80vh;
+  background-color: transparent;
+  margin-left: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.point-one {
+  display: flex;
+  width: 100%;
+  height: 25%;
+  border: white solid 2px;
+  border-radius: 50px;
+}
+
+.point-one-text {
+  align-self: center;
+  font-size: 1.75rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: white;
+  margin-right: 5%;
+}
+
+.lock {
+  height: 50%;
+  align-self: center;
+  margin-left: 7.5%;
+  margin-right: 2.5%;
+}
+  
+  
+  /* SECTION NINE MOBILE */
+
+  .nine {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+  }
+  
+  .nine-container {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 0%;
+  }
+  
+  .nine-main {
+    font-size: 2.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: white;
+    align-self: center;
+    margin-bottom: 0;
+  }
+  
+  .nine-description {
+    font-size: 1.25rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-top: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    align-self: self-start;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    margin-left: 0%;
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buy-container {
+    width: 50%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: white solid 2px;
+    border-radius: 50px;
+    color: white;
+    align-self: center;
+    margin-top: 0;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  
+  .buy-container h1 {
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+
 }
 
 
